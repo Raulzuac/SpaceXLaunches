@@ -1,0 +1,39 @@
+<div id="card">
+  @if (launch) {
+    <p-card header="{{launch!.name}}">
+      <ng-template pTemplate="header">
+        @if (launch.links.patch.large) {
+          <img src="{{launch!.links.patch.large}}">
+        }
+        @else {
+          <img src="assets/images/SpaceX-Logo.png" alt="">
+        }
+      </ng-template>
+      <p>
+        @if (launch.details) {
+          {{launch!.details}}
+        }
+        @else {
+          No details available
+        }
+      </p>
+      @if (launch.success)
+      {
+        <p class="success">Launch was successful</p>
+      }
+      @else {
+        <p class="failure">Launch was not successful</p>
+      }
+      <p>
+        {{launch!.date_utc | date}}
+      </p>
+    </p-card>
+  }
+  @else {
+    <p-card header="No launch selected">
+      <ng-template pTemplate="header">
+        <img src="assets/images/SpaceX-Logo.png" alt="">
+      </ng-template>
+    </p-card>
+  }
+</div>

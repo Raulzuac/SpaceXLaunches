@@ -1,0 +1,11 @@
+h2{
+  margin: 1em 2em;
+}
+
+#info{
+  padding: 2em;
+}
+iamges{
+  display: flex;
+  flex-wrap: wrap;
+}

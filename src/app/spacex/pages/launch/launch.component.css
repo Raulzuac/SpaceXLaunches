@@ -1,0 +1,29 @@
+#card{
+  width: 90vw;
+  margin: 5em auto;
+}
+
+.success{
+  color: green;
+}
+
+.failure{
+  color: red;
+}
+
+img{
+  margin: 3em 5vw;
+  width: 80vw;
+}
+
+@media only screen and (min-width: 950px) {
+  #card{
+    width: 40vw;
+    margin: 5em auto;
+  }
+
+  img{
+    margin: 3em 5vw;
+    width: 30vw;
+  }
+}

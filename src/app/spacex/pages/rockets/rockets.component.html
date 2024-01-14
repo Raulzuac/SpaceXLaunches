@@ -1,0 +1,16 @@
+<div>
+  <h2>Rocket history</h2>
+</div>
+<app-rockets-table [rockets]="Rockets"></app-rockets-table>
+<div id="info">
+  <hr>
+  <p>Aditional information</p>
+  <p>The heaviest rocket: {{getHeaviestRocket()}}</p>
+  <p>For more info stay tuned for version 2.0</p>
+  <hr>
+</div>
+<div id="images">
+  @for (rocket of rockets; track $index) {
+    <img src={{rocket.flickr_images[0]}} alt="" width="350" style="margin: 5%;">
+  }
+</div>
